@@ -1,0 +1,111 @@
+{
+  "source_url": "https://archive.ics.uci.edu/static/public/572/taiwanese+bankruptcy+prediction.zip",
+  "sha256": "c346f5ad2618cb198e7ed8306cf2f31fe3bb2ec60acdbbe1736788d50f269aac",
+  "original_rows": 6819,
+  "unique_rows": 6819,
+  "features": 95,
+  "train_rows": 5455,
+  "test_rows": 1364,
+  "train_bankrupt": 176,
+  "test_bankrupt": 44,
+  "test_prevalence": 0.03225806451612903,
+  "selected_model": "gradient_boosting",
+  "threshold": 0.5,
+  "models": [
+    {
+      "model": "majority_baseline",
+      "cv_average_precision": 0.0322639465705779,
+      "parameters": {},
+      "average_precision": 0.03225806451612903,
+      "roc_auc": 0.5,
+      "accuracy": 0.967741935483871,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "confusion_matrix": [
+        [
+          1320,
+          0
+        ],
+        [
+          44,
+          0
+        ]
+      ]
+    },
+    {
+      "model": "decision_tree",
+      "cv_average_precision": 0.2758563716905463,
+      "parameters": {
+        "model__max_depth": "3",
+        "sampler": "passthrough"
+      },
+      "average_precision": 0.2824321788466373,
+      "roc_auc": 0.8244748622589532,
+      "accuracy": 0.9699413489736071,
+      "precision": 0.6153846153846154,
+      "recall": 0.18181818181818182,
+      "f1": 0.2807017543859649,
+      "confusion_matrix": [
+        [
+          1315,
+          5
+        ],
+        [
+          36,
+          8
+        ]
+      ]
+    },
+    {
+      "model": "random_forest",
+      "cv_average_precision": 0.42347249846775004,
+      "parameters": {
+        "model__max_depth": "None",
+        "model__min_samples_leaf": "5",
+        "sampler": "passthrough"
+      },
+      "average_precision": 0.5114927100143297,
+      "roc_auc": 0.9509125344352617,
+      "accuracy": 0.9721407624633431,
+      "precision": 0.7142857142857143,
+      "recall": 0.22727272727272727,
+      "f1": 0.3448275862068966,
+      "confusion_matrix": [
+        [
+          1316,
+          4
+        ],
+        [
+          34,
+          10
+        ]
+      ]
+    },
+    {
+      "model": "gradient_boosting",
+      "cv_average_precision": 0.4569753354487844,
+      "parameters": {
+        "model__learning_rate": "0.05",
+        "model__max_depth": "2",
+        "sampler": "passthrough"
+      },
+      "average_precision": 0.49502942761997043,
+      "roc_auc": 0.9424328512396694,
+      "accuracy": 0.9699413489736071,
+      "precision": 0.5882352941176471,
+      "recall": 0.22727272727272727,
+      "f1": 0.32786885245901637,
+      "confusion_matrix": [
+        [
+          1313,
+          7
+        ],
+        [
+          34,
+          10
+        ]
+      ]
+    }
+  ]
+}
